@@ -1,0 +1,23 @@
+package mymy;
+
+public class Test1 {
+	  public static void main(String[] args) {
+		 String card= "4455-QW34-F2J7-6789";
+		  
+		 String a= card.substring(0,4);
+		 // 
+		 int num1 = Integer.parseInt(a);
+		 String b= card.substring(5,9);
+		 String c= card.substring(10,14);
+		 String d= card.substring(15,19);
+		 int num2 = Integer.parseInt(d);
+		 
+		 System.out.println(num1);
+		 System.out.println(b);
+		 System.out.println(c);
+		 System.out.println(num2);
+		 System.out.printf("%d %s %s %d",num1,b,c,num2);
+	        
+	    }
+	}
+
