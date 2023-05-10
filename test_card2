@@ -1,0 +1,82 @@
+package mymy;
+
+public class Test2 {
+	public static void main(String[] args) {
+		String card = "4455-QW34-F2J7-6789";
+		String result1 = num1(card);
+		int a = Integer.parseInt(result1);
+		System.out.println(a);
+
+		String result2 = string1(card);
+		System.out.println(result2);
+
+		String result3 = string1(card);
+		System.out.println(result3);
+
+		String result4 = num2(card);
+		int b = Integer.parseInt(result4);
+		System.out.println(b);
+
+	}
+
+//public static String num(String a) {
+//	char[] arr = a.toCharArray();
+//	int[] arr2 = new int[4];
+//    String number = "";
+//    for(int i = 0;i<arr.length;i++) {
+//        char ch = arr[i];
+//    }
+//    return number;
+//	}
+
+//public static String num(String a) {
+//  char[] arr = a.toCharArray();
+//  int number = 0;
+//  for(int i = 0;i<arr.length;i++) {
+//     char ch = arr[i];
+//    for(int j = 0;j<4;j++) {
+//    	System.out.println(ch(j));
+//    }
+//  }
+//  return number;
+
+	public static String num1(String a) {
+		String number = "";
+		char[] arr = a.toCharArray();
+		for (int i = 0; i < 4; i++) {
+			char ch = arr[i];
+			number += ch;
+		}
+		return number;
+	}
+
+	public static String string1(String b) {
+		String number = "";
+		char[] arr = b.toCharArray();
+		for (int i = 5; i < 9; i++) {
+			char ch = arr[i];
+			number += ch;
+		}
+		return number;
+	}
+
+	public static String string2(String c) {
+		String number = "";
+		char[] arr = c.toCharArray();
+		for (int i = 10; i < 14; i++) {
+			char ch = arr[i];
+			number += ch;
+		}
+		return number;
+	}
+
+	public static String num2(String d) {
+		String number = "";
+		char[] arr = d.toCharArray();
+		for (int i = 15; i < 19; i++) {
+			char ch = arr[i];
+			number += ch;
+		}
+		return number;
+	}
+}
