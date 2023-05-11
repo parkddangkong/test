@@ -1,0 +1,92 @@
+package mymy;
+
+import java.util.Arrays;
+
+public class Test3 {
+	public static int[] num1(int a, int b) {
+		int min = 0, max = 0;
+		int[] arr = new int[2];
+		if (a > b) {
+			min = b;
+			max = a;
+		} else if (b > a) {
+			min = a;
+			max = b;
+		}
+		arr[0] = min;
+		arr[1] = max;
+		return arr;
+	}
+
+	public static int[] num2(int a, int b, int c) {
+		int[] arr = new int[2];
+		int min = a > b ? b : c > a ? a : b > c ? c : 0;
+		int max = a > b ? a : b > c ? b : c > a ? c : 0;
+		arr[0] = min;
+		arr[1] = max;
+		return arr;
+	}
+
+	public static int[] num3(int a, int b, int c, int d) {
+		int[] arr = new int[2];
+		int min = Math.min(a, Math.min(b, Math.min(c, d)));
+		int max = Math.max(a, Math.max(b, Math.max(c, d)));
+		arr[0] = min;
+		arr[1] = max;
+		return arr;
+	}
+
+	public static int[] num4(int a, int b, int c, int d) {
+		int[] arr = new int[2];
+		int[] arr2 = { a, b, c, d };
+		int min = arr2[0], max = arr2[0];	// 
+		for (int i = 0; i < arr2.length; i++) {
+			if (max < arr2[i]) {
+	            max = arr2[i];
+	        } 
+			if (min > arr2[i]) {
+				min = arr2[i];
+			}
+		}
+		arr[0] = min;
+		arr[1] = max;
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		int[] number = num1(1, 3);
+		System.out.println(Arrays.toString(number));
+
+		int[] number2 = num2(3, 6, 5);
+		System.out.println(Arrays.toString(number2));
+
+		int[] number3 = num3(3, 6, 5, 8);
+		System.out.println(Arrays.toString(number3));
+
+		int[] number4 = num4(3, 6, 5, 8);
+		System.out.println(Arrays.toString(number4));
+		
+		
+
+		int[] number5 = { 5, 9, 3, 8, 4 };
+		int min = number5[0], max = number5[0];
+		for (int i = 0; i < number5.length; i++) {
+			if (max < number5[i]) {
+				max = number5[i];
+			} 
+			if(min > number5[i]) {
+				min = number5[i];
+			}
+		}
+		int[] number6 = new int[2];
+		number6[0] = min;
+		number6[1] = max;
+		System.out.println(Arrays.toString(number6));
+//	최소 최대값 구하는 함수
+//	매개변수 2개 비교
+//	매개변수 3개 비교
+//	매개변수 4개 비교
+//	배열에 값 5개 저장하여 비교하기
+
+	}
+}
