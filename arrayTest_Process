@@ -1,0 +1,98 @@
+package arrayTest;
+
+public class Process {
+	public int[] arr(int[] arr) {
+		int[] answer = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			answer[arr.length - 1 - i] = arr[i];
+		}
+		return answer;
+	}
+	
+	public int[] odd_even(int[] arr) {
+		int odd = 0, even = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				even++;
+			} else {
+				odd++;
+			}
+		}
+		System.out.println("짝수의 개수 : " + even);
+		System.out.println("홀수의 개수 : " + odd);
+		
+		int[] answer = new int[2];
+		answer[0] = even;
+		answer[1] = odd;
+		
+		return answer;
+	}
+	
+	public int[] evenArray(int[] arr) {
+		int[] answer = {};
+		int add=0;
+		int index = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				add++;
+				answer = new int[add];
+			}
+			answer[index] = arr[i];
+			index++;
+		}
+		return answer;
+	}
+	
+	public int[] oddArray(int[] arr) {
+		int[] answer = {};
+		int add=0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0) {
+				add++;
+			}
+		}
+		answer = new int[add];
+		int index = 0;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i] % 2!=0) {
+			answer[index] = arr[i];
+			index++;
+			}
+		}
+		return answer;
+
+	}
+	
+	public int evenArray_sum(int[] evenarr) {
+		int answer = 0;
+		for(int i=0;i<evenarr.length;i++) {
+			answer += evenarr[i];
+		}
+		return answer;
+	}
+	
+	public int odd_sum(int[] oddarr) {
+		int answer = 0;
+		for(int i=0;i<oddarr.length;i++) {
+			answer += oddarr[i];
+		}
+		return answer;
+	}
+	
+	public int[] sort(int[] arr) {
+		int[] answer = new int[arr.length];
+		for(int i = 0;i<arr.length;i++) {
+			for(int j =1;j<arr.length;j++) {
+				if(arr[j-1]>arr[j]) {
+					int temp = arr[j-1];
+					arr[j-1] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		return answer = arr;
+	}
+	
+	
+}
+
